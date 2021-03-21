@@ -2,7 +2,7 @@ import re
 
 
 def reader(path):
-    with open(path,'r') as f:
+    with open(f"lab14/{path}",'r') as f:
         txt = f.read()
 
     return txt
@@ -17,24 +17,34 @@ def evller(txt, kn):
     return txt
 
 def writer(txt, path, kn):
-    with open(f"{kn}{path}", 'w') as f:
+    with open(f"./personalised/{kn}{path}", 'w') as f:
         f.write(txt)
 
 if __name__ == '__main__':
     files = [
-        'lab15_r1.conf',
-        'lab15_r2.conf',
-        'lab15_r3.conf',
+        'lab14_B1-S1.conf',
+        'lab14_B1-S2.conf',
+        'lab14_B1-S3.conf',
+        'lab14_B1.conf',
+        'lab14_HQ.conf',
     ]
-    kn_numbers = [9,29]
+    kn_numbers = [9]
+
+    #lab14
     things = {
-    '?1kn': [74,9],
-    '?2kn': [180,119],
-    '?3kn': [115,223],
-    '?area': [10,15],
-    '?ospf-id': [14,4],
+        '?1kn' : [147],    #hat sich bis jetzt nur einmal geändert
+        '?vlan' : [57],   #Katalog nummer
     }
-    
+    lab15="""
+    things = {
+    '?1kn': [76,120,206],
+    '?2kn': [32,191,55],
+    '?3kn': [2,27,123],
+    '?area': [5,15,20],
+    '?ospf-id': [10,7,15],
+    }
+    """
+
     for i in range(len(kn_numbers)):
         for f in files:
             txt = reader(f)

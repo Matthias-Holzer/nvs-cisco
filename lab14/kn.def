@@ -1,0 +1,26 @@
+?1kn
+    10.209.99.1 -> 10.?1kn.99.1
+
+?vlan
+    vlan 10 -> vlan 10
+    vlan 20 -> vlan 20
+    vlan 76 -> vlan 76
+
+
+
+!!!!!vlans
+
+vlan 10
+name Admin
+
+vlan 20
+name Sales
+
+vlan 57
+name Production
+
+vlan 99
+name Mgmt&Native
+
+vlan 999
+name BlackHole
